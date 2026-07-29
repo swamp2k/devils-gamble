@@ -15,29 +15,32 @@
         <span class="brand-mark">♠</span>
         <div>
           <h1>DEVIL'S GAMBLE</h1>
-          <p>Guess what the Devil would choose.</p>
+          <p>Guess the Devil. Save the idiot.</p>
         </div>
       </div>
       <div class="stats" aria-label="Game statistics">
-        <div><span>HELL CHIPS</span><strong id="bank">0</strong></div>
-        <div><span>POT</span><strong id="pot">0</strong></div>
+        <div><span>BANK</span><strong id="bank">0</strong></div>
+        <div class="pot-stat"><span>POT</span><strong id="pot">0</strong></div>
         <div><span>STREAK</span><strong id="streak">0</strong></div>
       </div>
     </header>
 
-    <section class="dealer-panel">
-      <div class="devil-avatar" aria-hidden="true">😈</div>
-      <div class="dealer-copy">
-        <span class="eyebrow" id="dealerName">YOUR DEALER</span>
-        <p id="dealerLine">Two cards. One opinion. Try not to disappoint me.</p>
-      </div>
+    <section class="dealer-strip" aria-live="polite">
+      <span class="devil-avatar" aria-hidden="true">😈</span>
+      <strong id="dealerName">YOUR DEALER</strong>
+      <span class="dealer-line" id="dealerLine">Two cards. One opinion. Try not to disappoint me.</span>
+    </section>
+
+    <section class="question-copy">
+      <span class="eyebrow">THE DEVIL ASKS</span>
+      <h2 id="questionText"></h2>
     </section>
 
     <section class="table" id="table">
-      <button class="choice-card left" id="leftCard" type="button">
+      <button class="choice-card left" id="leftCard" type="button" aria-keyshortcuts="A ArrowLeft 1">
         <span class="card-corner">A</span>
         <span class="choice-text" id="leftText"></span>
-        <span class="choose">CHOOSE</span>
+        <span class="choose">A / ←</span>
       </button>
 
       <div class="danger-stage" id="dangerStage" aria-live="polite">
@@ -53,41 +56,35 @@
             <div class="victim-leg right-leg"></div>
           </div>
           <div class="hazard hazard-bottom" id="hazardBottom"></div>
+          <div class="impact-flash" aria-hidden="true"></div>
         </div>
         <div class="victim-name" id="victimName"></div>
+
+        <div class="verdict hidden" id="verdict" aria-live="assertive">
+          <span class="verdict-kicker" id="verdictKicker"></span>
+          <strong id="verdictTitle"></strong>
+          <span class="verdict-copy" id="verdictText"></span>
+          <div class="verdict-actions" id="verdictActions"></div>
+        </div>
       </div>
 
-      <button class="choice-card right" id="rightCard" type="button">
+      <button class="choice-card right" id="rightCard" type="button" aria-keyshortcuts="B ArrowRight 2">
         <span class="card-corner">B</span>
         <span class="choice-text" id="rightText"></span>
-        <span class="choose">CHOOSE</span>
+        <span class="choose">B / →</span>
       </button>
     </section>
 
-    <section class="question-copy">
-      <span class="eyebrow">THE QUESTION</span>
-      <h2 id="questionText"></h2>
-    </section>
-
-    <section class="result-panel hidden" id="resultPanel" aria-live="polite">
-      <div>
-        <span class="eyebrow" id="resultEyebrow">VERDICT</span>
-        <h2 id="resultTitle"></h2>
-        <p id="resultText"></p>
+    <section class="utility-row" aria-label="Dubious assistance">
+      <div class="cheats">
+        <button type="button" id="peekBtn" title="Briefly reveal the Devil's preferred card">PEEK <small>250</small></button>
+        <button type="button" id="rerollBtn" title="Discard both cards">REROLL <small>500</small></button>
+        <button type="button" id="insuranceBtn" title="Protect the current pot from one loss">INSURE <small>1000</small></button>
       </div>
-      <div class="result-actions" id="resultActions"></div>
-    </section>
-
-    <section class="cheats" aria-label="Dubious assistance">
-      <button type="button" id="peekBtn">PEEK <small>250</small></button>
-      <button type="button" id="rerollBtn">REROLL <small>500</small></button>
-      <button type="button" id="insuranceBtn">INSURANCE <small>1000</small></button>
-    </section>
-
-    <footer>
-      <span id="runHint">The house always wins. Eventually.</span>
       <button type="button" class="text-button" id="newRunBtn">NEW DEALER</button>
-    </footer>
+    </section>
+
+    <footer><span id="runHint">The house always wins. Eventually.</span></footer>
   </main>
   <script src="game.js"></script>
 </body>

@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#120908" />
   <title>Devil's Gamble</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="modular.css" />
 </head>
 <body>
   <div class="embers" aria-hidden="true"></div>
@@ -25,12 +26,6 @@
       </div>
     </header>
 
-    <section class="dealer-strip" aria-live="polite">
-      <span class="devil-avatar" aria-hidden="true">😈</span>
-      <strong id="dealerName">YOUR DEALER</strong>
-      <span class="dealer-line" id="dealerLine">Two cards. One opinion. Try not to disappoint me.</span>
-    </section>
-
     <section class="question-copy">
       <span class="eyebrow">THE DEVIL ASKS</span>
       <h2 id="questionText"></h2>
@@ -47,13 +42,34 @@
         <div class="contraption-label" id="contraptionLabel"></div>
         <div class="contraption" id="contraption">
           <div class="hazard hazard-top" id="hazardTop"></div>
-          <div class="victim" id="victim" role="img" aria-label="Unfortunate contestant">
-            <div class="victim-head"></div>
-            <div class="victim-body"></div>
-            <div class="victim-arm left-arm"></div>
-            <div class="victim-arm right-arm"></div>
-            <div class="victim-leg left-leg"></div>
-            <div class="victim-leg right-leg"></div>
+          <div class="victim modular-victim" id="victim" role="img" aria-label="Unfortunate modular contestant">
+            <img class="body-part neck" src="assets/modular/tint1_neck.svg" alt="" />
+            <img class="body-part torso" src="assets/modular/redShirt1.svg" alt="" />
+            <img class="body-part hips" src="assets/modular/pantsLightBlue3.svg" alt="" />
+
+            <div class="body-part head-group" data-body-part="head">
+              <img class="head-base" src="assets/modular/tint1_head.svg" alt="" />
+              <img class="face" src="assets/modular/face1.svg" alt="" />
+              <img class="hair" src="assets/modular/brown2Man5.svg" alt="" />
+            </div>
+
+            <div class="body-part arm-group arm-left" data-body-part="left-arm">
+              <img class="sleeve" src="assets/modular/redArm_long.svg" alt="" />
+              <img class="hand" src="assets/modular/tint1_hand.svg" alt="" />
+            </div>
+            <div class="body-part arm-group arm-right" data-body-part="right-arm">
+              <img class="sleeve" src="assets/modular/redArm_long.svg" alt="" />
+              <img class="hand" src="assets/modular/tint1_hand.svg" alt="" />
+            </div>
+
+            <div class="body-part leg-group leg-left" data-body-part="left-leg">
+              <img class="trouser-leg" src="assets/modular/pantsLightBlue_long.svg" alt="" />
+              <img class="shoe" src="assets/modular/brownShoe5.svg" alt="" />
+            </div>
+            <div class="body-part leg-group leg-right" data-body-part="right-leg">
+              <img class="trouser-leg" src="assets/modular/pantsLightBlue_long.svg" alt="" />
+              <img class="shoe" src="assets/modular/brownShoe5.svg" alt="" />
+            </div>
           </div>
           <div class="hazard hazard-bottom" id="hazardBottom"></div>
           <div class="impact-flash" aria-hidden="true"></div>
@@ -73,6 +89,12 @@
         <span class="choice-text" id="rightText"></span>
         <span class="choose">B / →</span>
       </button>
+    </section>
+
+    <section class="dealer-strip" aria-live="polite">
+      <span class="devil-avatar" aria-hidden="true">😈</span>
+      <strong id="dealerName">YOUR DEALER</strong>
+      <span class="dealer-line" id="dealerLine">Two cards. One opinion. Try not to disappoint me.</span>
     </section>
 
     <section class="utility-row" aria-label="Dubious assistance">

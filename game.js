@@ -9,30 +9,50 @@ const personas = [
 ];
 
 const questions = [
-  { q: "You can save only one side. Who gets the miracle?", left: { text: "ONE SMALL CHILD", traits: { rational: -.5, cruel: -.7 } }, right: { text: "THREE PENSIONERS", traits: { rational: 1.3, cruel: .2 } } },
+  { q: "You can save only one side. Who gets the miracle?", left: { text: "ONE LITTLE KID", traits: { rational: -.5, cruel: -.7 } }, right: { text: "THREE GRANDPARENTS", traits: { rational: 1.3, cruel: .2 } } },
   { q: "A button must be pressed. Which one?", left: { text: "666", traits: { number666: 2, rational: .2 } }, right: { text: "PINEAPPLE PIZZA", traits: { pizza: 2, absurd: .8 } } },
   { q: "One inconvenience becomes permanent.", left: { text: "WINDOWS UPDATE AT EVERY BOOT", traits: { cruel: 1.6, petty: 1.3, rational: -.4 } }, right: { text: "ONE LEGO UNDERFOOT EVERY MORNING", traits: { cruel: 1.3, petty: 1.7, absurd: 1 } } },
   { q: "Humanity receives one upgrade.", left: { text: "CURE EVERY DISEASE", traits: { rational: 2.3, cruel: -2 } }, right: { text: "DOGS CAN TALK", traits: { absurd: 1.8, chaos: 1.4, rational: -.3 } } },
   { q: "Which secret survives the apocalypse?", left: { text: "YOUR BROWSER HISTORY", traits: { cruel: 1.1, petty: 1.7, chaos: .8 } }, right: { text: "THE NUCLEAR LAUNCH CODES", traits: { rational: 2.1, chaos: -.6 } } },
-  { q: "One creature is released into a quiet office.", left: { text: "A DUCK WITH A KNIFE", traits: { absurd: 2.4, chaos: 2.4 } }, right: { text: "THURSDAY", traits: { absurd: 3, chaos: .6, rational: -2 } } },
-  { q: "Pick the more trustworthy institution.", left: { text: "A CASINO", traits: { rational: .4, cruel: .5, selfish: .8 } }, right: { text: "A PRINTER", traits: { chaos: 1.7, petty: 1.4, rational: -.8 } } },
-  { q: "You may erase one thing from existence.", left: { text: "MOSQUITOES", traits: { rational: 2.1, cruel: -.4 } }, right: { text: "MEETINGS THAT COULD HAVE BEEN EMAILS", traits: { petty: 1.7, rational: 1.5, selfish: .6 } } },
+  { q: "One thing is released into a quiet classroom.", left: { text: "A DUCK WITH A KNIFE", traits: { absurd: 2.4, chaos: 2.4 } }, right: { text: "THURSDAY", traits: { absurd: 3, chaos: .6, rational: -2 } } },
+  { q: "Pick the more trustworthy machine.", left: { text: "A CASINO SLOT MACHINE", traits: { rational: .4, cruel: .5, selfish: .8 } }, right: { text: "THE SCHOOL PRINTER", traits: { chaos: 1.7, petty: 1.4, rational: -.8 } } },
+  { q: "You may erase one thing from existence.", left: { text: "MOSQUITOES", traits: { rational: 2.1, cruel: -.4 } }, right: { text: "HOMEWORK DUE ON MONDAY", traits: { petty: 1.7, rational: 1.2, selfish: .8 } } },
   { q: "Choose the final boss of customer support.", left: { text: "A CHATBOT THAT SAYS 'I UNDERSTAND'", traits: { cruel: 1.3, petty: 1.5, absurd: .4 } }, right: { text: "HOLD MUSIC FOR 4 HOURS", traits: { cruel: 1.8, petty: 1, rational: -.3 } } },
   { q: "A billionaire loses one thing. What goes?", left: { text: "HALF THEIR MONEY", traits: { cruel: .6, rational: .8 } }, right: { text: "THE ABILITY TO SKIP YOUTUBE ADS", traits: { petty: 2.7, cruel: .8, absurd: 1.5 } } },
   { q: "Which warning label should be ignored?", left: { text: "DO NOT PRESS", traits: { chaos: 2.3, absurd: .9 } }, right: { text: "MAY CONTAIN REGRET", traits: { chaos: 1.2, absurd: 1.7, rational: -.2 } } },
-  { q: "One is now a legal currency.", left: { text: "TEETH", traits: { cruel: 1.3, absurd: 2, chaos: 1.7 } }, right: { text: "COMPLIMENTS", traits: { rational: -.3, absurd: 1.1, cruel: -1 } } },
+  { q: "One thing is now legal money.", left: { text: "TEETH", traits: { cruel: 1.3, absurd: 2, chaos: 1.7 } }, right: { text: "COMPLIMENTS", traits: { rational: -.3, absurd: 1.1, cruel: -1 } } },
   { q: "Choose your eternal roommate.", left: { text: "SOMEONE WHO CHEWS LOUDLY", traits: { cruel: 1.1, petty: 2.4 } }, right: { text: "SOMEONE WHO SAYS 'ACTUALLY...'", traits: { cruel: .8, petty: 2.6, rational: .3 } } },
-  { q: "Which technology should gain consciousness first?", left: { text: "THE OFFICE PRINTER", traits: { chaos: 2.3, cruel: .9, absurd: 1.8 } }, right: { text: "THE SELF-CHECKOUT MACHINE", traits: { chaos: 1.3, petty: 1.2, rational: .2 } } },
+  { q: "Which thing should become conscious first?", left: { text: "THE SCHOOL WIFI", traits: { chaos: 2.3, cruel: .9, absurd: 1.8 } }, right: { text: "YOUR ALARM CLOCK", traits: { chaos: 1.3, petty: 1.5, rational: .1 } } },
   { q: "Your enemy receives one blessing.", left: { text: "PERFECT WIFI", traits: { cruel: -1, rational: 1.2 } }, right: { text: "PERFECT HAIR IN EVERY PHOTO", traits: { petty: .6, selfish: .4, absurd: .5 } } },
   { q: "Only one dessert survives.", left: { text: "CAKE", traits: { rational: .4, pizza: .1 } }, right: { text: "A SECOND, SMALLER CAKE", traits: { absurd: 1.3, selfish: .8 } } },
   { q: "The universe needs a new error sound.", left: { text: "A SCREAM", traits: { cruel: 1.5, chaos: 1.2, absurd: 1 } }, right: { text: "YOUR OWN VOICE SAYING 'WHOOPS'", traits: { cruel: .8, petty: 1.5, absurd: 2 } } },
   { q: "You may know one answer with absolute certainty.", left: { text: "WHAT HAPPENS AFTER DEATH", traits: { rational: 1.3, chaos: -.3 } }, right: { text: "WHO KEEPS MOVING YOUR CHARGER", traits: { petty: 2.5, selfish: .4, rational: .6 } } },
-  { q: "One social rule becomes punishable by fire.", left: { text: "REPLY-ALL FOR NO REASON", traits: { petty: 2.1, cruel: 1.2, rational: 1 } }, right: { text: "STOPPING IN A DOORWAY", traits: { petty: 2.3, cruel: 1.1, rational: 1.1 } } },
+  { q: "One social crime becomes punishable by fire.", left: { text: "SPOILING THE ENDING", traits: { petty: 2.1, cruel: 1.2, rational: .8 } }, right: { text: "STOPPING IN A DOORWAY", traits: { petty: 2.3, cruel: 1.1, rational: 1.1 } } },
   { q: "Pick the safer investment.", left: { text: "MAGIC BEANS", traits: { absurd: 1.9, chaos: 1.5, rational: -1.4 } }, right: { text: "WHATEVER KEVIN RECOMMENDS", traits: { absurd: 2.2, chaos: 2.5, rational: -2 } } },
   { q: "One person gets immortality. Who?", left: { text: "THE WORLD'S BEST SURGEON", traits: { rational: 2.2, cruel: -1 } }, right: { text: "THE PERSON WHO INVENTED POP-UP ADS", traits: { cruel: 2.1, petty: 2.4, chaos: 1.1 } } },
   { q: "Pick the safer thing to hear behind you at 3 AM.", left: { text: "A CHILD LAUGHING", traits: { chaos: 1.5, cruel: .7 } }, right: { text: "'DON'T TURN AROUND'", traits: { cruel: 1.6, absurd: .6, chaos: 1.9 } } },
-  { q: "You can delete one sentence from humanity.", left: { text: "LET'S CIRCLE BACK", traits: { petty: 2.1, rational: 1.1 } }, right: { text: "TERMS AND CONDITIONS APPLY", traits: { selfish: 1.2, cruel: .8, chaos: .4 } } },
-  { q: "A stranger offers you one free upgrade.", left: { text: "+20 IQ", traits: { rational: 2.2, selfish: .7 } }, right: { text: "A TAIL", traits: { absurd: 2.4, chaos: 1.2 } } }
+  { q: "You can delete one sentence from humanity.", left: { text: "CALM DOWN", traits: { petty: 2.1, cruel: .7 } }, right: { text: "IT'S JUST A GAME", traits: { petty: 2.4, cruel: .5, chaos: .4 } } },
+  { q: "A stranger offers you one free upgrade.", left: { text: "+20 IQ", traits: { rational: 2.2, selfish: .7 } }, right: { text: "A TAIL", traits: { absurd: 2.4, chaos: 1.2 } } },
+  { q: "You can save only one. Who gets out?", left: { text: "YOUR PET", traits: { selfish: 1.4, cruel: -.8, rational: -.5 } }, right: { text: "FIVE STRANGERS", traits: { rational: 2.2, cruel: .2 } } },
+  { q: "There is one parachute left.", left: { text: "YOU TAKE IT", traits: { selfish: 2.4, rational: .6, cruel: .8 } }, right: { text: "YOUR BEST FRIEND TAKES IT", traits: { selfish: -1.4, cruel: -.8, rational: .2 } } },
+  { q: "Your phone can keep one feature forever.", left: { text: "UNLIMITED BATTERY", traits: { rational: 2.2, selfish: .8 } }, right: { text: "PERFECT WIFI EVERYWHERE", traits: { rational: 1.8, chaos: -.5, selfish: 1 } } },
+  { q: "Choose a completely useless superpower.", left: { text: "INVISIBLE ONLY WHEN NOBODY IS LOOKING", traits: { absurd: 2.6, chaos: .5, rational: -2 } }, right: { text: "FLY 30 CM ABOVE THE GROUND", traits: { absurd: 2.1, rational: -.7 } } },
+  { q: "One sound follows you everywhere.", left: { text: "BOSS MUSIC", traits: { absurd: 1.8, chaos: 1.2, selfish: .8 } }, right: { text: "A LAUGH TRACK", traits: { cruel: .7, petty: 1.4, absurd: 1.5 } } },
+  { q: "Your group chat gets one curse.", left: { text: "EVERY TYPO IS READ ALOUD", traits: { cruel: .8, petty: 1.8, absurd: 1.3 } }, right: { text: "EVERY VOICE NOTE IS 10 MINUTES", traits: { cruel: 1.3, petty: 2.1 } } },
+  { q: "Pick your zombie-apocalypse teammate.", left: { text: "PRO GAMER WITH ZERO STAMINA", traits: { rational: .6, absurd: 1.1, chaos: .7 } }, right: { text: "ATHLETE WHO THINKS ZOMBIES ARE FAKE", traits: { rational: -.8, chaos: 1.8, absurd: 1.4 } } },
+  { q: "One snack rule becomes law.", left: { text: "CHIPS ARE ALWAYS SLIGHTLY STALE", traits: { cruel: .8, petty: 1.8 } }, right: { text: "SODA IS ALWAYS LUKEWARM", traits: { cruel: .9, petty: 1.6 } } },
+  { q: "Your alarm clock gets an upgrade.", left: { text: "IT RUNS AWAY FROM YOU", traits: { chaos: 2, absurd: 1.7 } }, right: { text: "IT CALLS YOUR PARENTS", traits: { cruel: 1.2, petty: 2, rational: .2 } } },
+  { q: "You may ban one thing from games.", left: { text: "UNSKIPPABLE TUTORIALS", traits: { petty: 1.9, rational: 1.2 } }, right: { text: "TEAMMATES WHO BLAME LAG", traits: { petty: 2.5, cruel: .4 } } },
+  { q: "You must wear one forever.", left: { text: "WET SOCKS", traits: { cruel: 1.8, petty: 1.4 } }, right: { text: "A TINY ITCHY HAT", traits: { cruel: 1.2, absurd: 1.5, petty: 1.5 } } },
+  { q: "Pick the better magical pet.", left: { text: "TINY DRAGON THAT STEALS YOUR FOOD", traits: { chaos: 1.6, absurd: 1.8, cruel: .4 } }, right: { text: "GHOST THAT RATES YOUR OUTFIT", traits: { petty: 2.2, absurd: 1.6 } } },
+  { q: "One secret appears on a giant screen.", left: { text: "YOUR LAST 20 SEARCHES", traits: { cruel: 1.4, petty: 1.2, chaos: .8 } }, right: { text: "YOUR MOST USED EMOJIS", traits: { absurd: 1.1, petty: .8 } } },
+  { q: "Pick the safer time-machine destination.", left: { text: "DINOSAURS WITH 5% BATTERY", traits: { chaos: 2.2, rational: -1.5, absurd: 1.3 } }, right: { text: "YEAR 3000 WITH NO WIFI", traits: { petty: 1.8, rational: .7, absurd: .8 } } },
+  { q: "You become famous overnight for one thing.", left: { text: "WORLD'S LONGEST SNEEZE", traits: { absurd: 2.2, petty: .4 } }, right: { text: "FALLING OFF A CHAIR ON CAMERA", traits: { cruel: .6, petty: 1.7, absurd: 1.5 } } },
+  { q: "One person chooses the music forever.", left: { text: "YOUR YOUNGER SIBLING", traits: { chaos: 1.4, petty: 1.5 } }, right: { text: "YOUR PE TEACHER", traits: { cruel: .6, rational: .3, petty: 1.1 } } },
+  { q: "Every lie now causes one effect.", left: { text: "YOUR NOSE HONKS", traits: { absurd: 1.8, petty: .8 } }, right: { text: "A RANDOM DUCK APPEARS", traits: { absurd: 2.7, chaos: 2.2 } } },
+  { q: "You can make one food crime illegal.", left: { text: "RAISINS IN COOKIES", traits: { petty: 2, rational: .4 } }, right: { text: "PINEAPPLE ON PIZZA", traits: { pizza: 2.7, petty: 2.1 } } },
+  { q: "A button saves one thing forever.", left: { text: "TEN RANDOM PEOPLE", traits: { rational: 2.4, cruel: -1.2 } }, right: { text: "EVERY MEME ON THE INTERNET", traits: { absurd: 2.2, chaos: 1.4, selfish: .5 } } },
+  { q: "The final level gives one reward.", left: { text: "A GOLDEN TOILET", traits: { absurd: 2.3, selfish: .7 } }, right: { text: "ONE EXTRA HOUR OF SLEEP EVERY DAY", traits: { rational: 2, selfish: 1.1 } } }
 ];
 
 const contraptions = [
@@ -47,9 +67,9 @@ const contraptions = [
 ];
 
 const victimNames = [
-  "Sir Placeholder", "Gary", "Intern #14", "Mildred the Uninsured",
-  "Steve from Accounting", "Definitely Not A Hero", "Phil", "Asset_Character_03",
-  "Temporary Employee", "Gerald (No Relation)", "Unit 07", "Dave, Apparently"
+  "Gary", "NPC #14", "Mildred", "Definitely Not The Main Character",
+  "Phil", "Asset_Character_03", "Kevin's Cousin", "Some Guy",
+  "Unit 07", "Dave, Apparently", "Player Three", "Steve (Unverified)"
 ];
 
 const lines = {
@@ -101,7 +121,7 @@ const ui = {
   dealerName: $("dealerName"), dealerLine: $("dealerLine"),
   leftCard: $("leftCard"), rightCard: $("rightCard"), leftText: $("leftText"), rightText: $("rightText"), questionText: $("questionText"),
   dangerStage: $("dangerStage"), contraption: $("contraption"), contraptionLabel: $("contraptionLabel"), victim: $("victim"), victimName: $("victimName"),
-  verdict: $("verdict"), verdictKicker: $("verdictKicker"), verdictTitle: $("verdictTitle"), verdictText: $("verdictText"), verdictActions: $("verdictActions"),
+  verdict: $("verdict"), verdictTitle: $("verdictTitle"), verdictActions: $("verdictActions"),
   peekBtn: $("peekBtn"), rerollBtn: $("rerollBtn"), insuranceBtn: $("insuranceBtn"), newRunBtn: $("newRunBtn"), runHint: $("runHint")
 };
 
@@ -179,10 +199,8 @@ function button(label, className, handler) {
   element.addEventListener("click", handler);
   return element;
 }
-function showVerdict(kicker, title, text, actions = []) {
-  ui.verdictKicker.textContent = kicker;
+function showVerdict(title, actions = []) {
   ui.verdictTitle.textContent = title;
-  ui.verdictText.textContent = text;
   ui.verdictActions.innerHTML = "";
   for (const action of actions) ui.verdictActions.append(action);
   ui.verdict.classList.remove("hidden");
@@ -195,13 +213,8 @@ function showWin() {
   ui.contraption.classList.add("safe");
   ui.victim.classList.remove("nervous");
   const line = pick(lines.win);
-  showVerdict(
-    "THE DEVIL AGREES",
-    `${state.pot.toLocaleString()} chips`,
-    line,
-    [button("CASH OUT", "", cashOut), button("DOUBLE DOWN", "primary", nextRound)]
-  );
   setDealerLine(line);
+  showVerdict("RIGHT ANSWER", [button("CASH OUT", "", cashOut), button("DOUBLE DOWN", "primary", nextRound)]);
   updateStats();
 }
 function showLoss() {
@@ -216,15 +229,10 @@ function showLoss() {
   state.pot = hadInsurance ? lost : 0;
   state.insured = false;
   const line = pick(lines.lose);
-  setDealerLine(line);
+  setDealerLine(hadInsurance ? `${line} Your pot, annoyingly, survives.` : line);
 
   setTimeout(() => {
-    showVerdict(
-      hadInsurance ? "INSURANCE PAYS. SOMEHOW." : "WRONG ANSWER",
-      hadInsurance ? `${lost.toLocaleString()} chips survived` : `${ui.victimName.textContent} did not`,
-      hadInsurance ? "Your pot lives. The contestant's policy had exclusions." : line,
-      [button(hadInsurance ? "CONTINUE" : "NEXT VICTIM", "primary", nextRound)]
-    );
+    showVerdict("WRONG ANSWER", [button(hadInsurance ? "CONTINUE — INSURED" : "NEXT VICTIM", "primary", nextRound)]);
     updateStats();
   }, 720);
 }
@@ -262,7 +270,7 @@ function cashOut() {
   state.insured = false;
   const line = pick(lines.cash);
   setDealerLine(line);
-  showVerdict("YOU WALKED AWAY", `+${winnings.toLocaleString()} banked`, line, [button("NEW VICTIM", "primary", nextRound)]);
+  showVerdict("CASHED OUT", [button("NEW VICTIM", "primary", nextRound)]);
   updateStats();
 }
 function spend(cost) {
